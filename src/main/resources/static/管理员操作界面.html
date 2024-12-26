@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员操作界面</title>
+    <link rel="stylesheet" href="style(管信1).css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图书管理系统 - 管理员操作界面</h1>
+        </header>
+        
+        <div class="admin-info">
+            <h2>管理员个人信息</h2>
+            <p>用户名: <span id="admin-name">张三</span></p>
+            <p>邮箱: <span id="admin-email">zhangsan@example.com</span></p>
+            <a href="个人信息修改.html"><button onclick="editAdminInfo()">修改个人信息</button></a>
+        </div>
+
+        <div class="admin-actions">
+            <h2>管理员功能</h2>
+            <a href="图书管理.html"><button onclick="navigateTo('book-management')">图书管理</button></a>
+            <a href="系统管理.html"><button onclick="navigateTo('system-management')">系统管理</button></a>
+        </div>
+    </div>
+
+    <script src="script(管信1).js"></script>
+</body>
+</html>

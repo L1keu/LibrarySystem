@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>搜索结果</h1>
+            <div class="search-bar">
+                <form action="搜索结果页面.html" method="get">
+                    <input type="text" name="query" placeholder="按书名、作者、ISBN搜索" required>
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+        </header>
+
+        <div class="results">
+            <h2>搜索到的书籍：</h2>
+            <ul id="results-list">
+                <!-- 动态展示书籍列表 -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="search-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>借阅记录</title>
+    <link rel="stylesheet" href="style(借阅).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h2>借阅记录</h2>
+
+        <!-- 借阅记录列表 -->
+        <table id="borrow-record-table">
+            <thead>
+                <tr>
+                    <th>书名</th>
+                    <th>借阅时间</th>
+                    <th>归还时间</th>
+                    <th>逾期状态</th>
+                    <th>应缴罚金</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="borrow-records">
+                <!-- 借阅记录行（动态加载） -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script(借阅).js"></script>
+</body>
+</html>

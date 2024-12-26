@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息管理</title>
+    <link rel="stylesheet" href="style(个信).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h2>个人信息管理</h2>
+
+        <!-- 用户基本信息展示 -->
+        <div class="user-info">
+            <h3>基本信息</h3>
+            <p><strong>用户名：</strong><span id="username">张三</span></p>
+            <p><strong>邮箱：</strong><span id="email">zhangsan@example.com</span></p>
+            <p><strong>联系方式：</strong><span id="phone">123-456-7890</span></p>
+        </div>
+
+        <!-- 修改信息表单 -->
+        <div class="edit-info">
+            <h3>修改个人信息</h3>
+            <form id="edit-form">
+                <div class="form-group">
+                    <label for="new-email">新邮箱：</label>
+                    <input type="email" id="new-email" name="new-email" placeholder="请输入新邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-phone">新联系方式：</label>
+                    <input type="text" id="new-phone" name="new-phone" placeholder="请输入新联系方式" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">新密码：</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="请输入新密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">确认新密码：</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="确认新密码" required>
+                </div>
+                <button type="submit" id="submit-btn">提交修改</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script(个信).js"></script>
+</body>
+</html>
