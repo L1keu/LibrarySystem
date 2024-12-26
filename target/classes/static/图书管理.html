@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理</title>
+    <link rel="stylesheet" href="style(管理).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h2>图书管理</h2>
+
+        <!-- 图书搜索栏 -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="搜索书名、作者、ISBN..." onkeyup="searchBooks()">
+            <button id="search-btn">搜索</button>
+        </div>
+
+        <!-- 新增图书按钮（仅管理员可见） -->
+        <div class="add-book">
+            <button id="add-book-btn" onclick="window.location.href='新增图书.html'">新增图书</button>
+        </div>
+
+        <!-- 图书列表 -->
+        <table id="books-table">
+            <thead>
+                <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>分类</th>
+                    <th>库存</th>
+                    <th>借阅状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 图书数据行（这里是示例数据，实际应通过后台获取） -->
+                <tr>
+                    <td>《计算机科学导论》</td>
+                    <td>张三</td>
+                    <td>计算机科学</td>
+                    <td>5</td>
+                    <td>可借阅</td>
+                    <td>
+                        <button class="edit-btn" onclick="editBook(1)">编辑</button>
+                        <button class="delete-btn" onclick="deleteBook(1)">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>《数据结构与算法》</td>
+                    <td>李四</td>
+                    <td>计算机科学</td>
+                    <td>3</td>
+                    <td>已借出</td>
+                    <td>
+                        <button class="edit-btn" onclick="editBook(2)">编辑</button>
+                        <button class="delete-btn" onclick="deleteBook(2)">删除</button>
+                    </td>
+                </tr>
+                <!-- 更多书籍行... -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script(管理).js"></script>
+</body>
+</html>

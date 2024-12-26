@@ -1,0 +1,77 @@
+/* 页面基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* 标题 */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 图书信息展示 */
+.book-info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.book-cover img {
+    max-width: 150px;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-details h3 {
+    margin-top: 0;
+}
+
+/* 图书状态与借阅按钮 */
+.book-status {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-status p {
+    font-size: 16px;
+}
+
+#borrow-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#borrow-btn:hover {
+    background-color: #218838;
+}
+
+#borrow-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

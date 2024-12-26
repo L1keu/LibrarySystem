@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增图书</title>
+    <link rel="stylesheet" href="style(新书).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h2>新增图书</h2>
+
+        <!-- 新增图书表单 -->
+        <form id="add-book-form" onsubmit="addBook(event)">
+            <label for="book-title">书名</label>
+            <input type="text" id="book-title" name="title" required placeholder="请输入书名">
+
+            <label for="book-author">作者</label>
+            <input type="text" id="book-author" name="author" required placeholder="请输入作者">
+
+            <label for="book-isbn">ISBN</label>
+            <input type="text" id="book-isbn" name="isbn" required placeholder="请输入ISBN">
+
+            <label for="book-publisher">出版社</label>
+            <input type="text" id="book-publisher" name="publisher" required placeholder="请输入出版社">
+
+            <label for="book-publish-date">出版日期</label>
+            <input type="date" id="book-publish-date" name="publishDate" required>
+
+            <label for="book-description">图书简介</label>
+            <textarea id="book-description" name="description" required placeholder="请输入图书简介"></textarea>
+
+            <label for="book-price">书籍价格</label>
+            <input type="number" id="book-price" name="price" required placeholder="请输入书籍价格" step="0.01">
+
+            <button type="submit">提交</button>
+        </form>
+    </div>
+
+    <script src="script(新书).js"></script>
+</body>
+</html>

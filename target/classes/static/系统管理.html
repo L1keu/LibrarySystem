@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员系统管理</title>
+    <link rel="stylesheet" href="style(系统管理).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h2>管理员系统管理</h2>
+
+        <!-- 数据备份和恢复 -->
+        <div class="backup-section">
+            <h3>数据管理</h3>
+            <button class="backup-btn" onclick="backupData()">备份数据</button>
+            <button class="restore-btn" onclick="restoreData()">恢复数据</button>
+        </div>
+
+        <!-- 系统监控信息 -->
+        <div class="system-monitoring">
+            <h3>系统监控</h3>
+            <p><strong>当前用户数：</strong><span id="user-count">120</span></p>
+            <p><strong>当前借阅量：</strong><span id="borrow-count">350</span></p>
+            <p><strong>系统健康状况：</strong><span id="system-health">正常</span></p>
+        </div>
+
+        <!-- 权限管理 -->
+        <div class="permission-management">
+            <h3>权限管理</h3>
+            <table id="user-permissions-table">
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>角色</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 用户权限列表，数据动态加载 -->
+                    <tr>
+                        <td>zhangsan</td>
+                        <td><span id="role-zhangsan">普通用户</span></td>
+                        <td>
+                            <button class="change-role-btn" onclick="changeRole('zhangsan')">修改角色</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>lisi</td>
+                        <td><span id="role-lisi">管理员</span></td>
+                        <td>
+                            <button class="change-role-btn" onclick="changeRole('lisi')">修改角色</button>
+                        </td>
+                    </tr>
+                    <!-- 更多用户... -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script(系统管理).js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录与注册</title>
+    <link rel="stylesheet" href="style(登录).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- 登录表单 -->
+            <div class="form" id="login-form">
+                <h2>用户登录</h2>
+                <form id="login" onsubmit="handleLogin(event)">
+                    <label for="login-username">用户名/邮箱</label>
+                    <input type="text" id="login-username" name="username" required placeholder="请输入用户名或邮箱">
+
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" name="password" required placeholder="请输入密码">
+
+                    <button type="submit" id="login-btn">登录</button>
+
+                    <div class="forgot-password">
+                        <a href="forgot_password.html">忘记密码？</a>
+                    </div>
+                </form>
+                <p>还没有账号？<a href="#" id="to-register" onclick="toggleForm('register')">注册</a></p>
+            </div>
+
+            <!-- 注册表单 -->
+            <div class="form" id="register-form" style="display: none;">
+                <h2>用户注册</h2>
+                <form id="register" onsubmit="handleRegister(event)">
+                    <label for="register-role">身份</label>
+                    <select id="register-role" name="role" required>
+                        <option value="user">用户</option>
+                        <option value="admin">管理员</option>
+                    </select>
+
+                    <label for="register-name">姓名</label>
+                    <input type="text" id="register-name" name="name" required placeholder="请输入姓名">
+
+                    <label for="register-contact">联系方式</label>
+                    <input type="text" id="register-contact" name="contact" required placeholder="请输入联系方式">
+
+                    <label for="register-email">邮箱</label>
+                    <input type="email" id="register-email" name="email" required placeholder="请输入邮箱">
+
+                    <label for="register-username">用户名 (数字)</label>
+                    <input type="text" id="register-username" name="username" required pattern="\d+" placeholder="请输入用户名（数字）">
+
+                    <label for="register-password">密码</label>
+                    <input type="password" id="register-password" name="password" required placeholder="请输入密码">
+
+                    <label for="register-confirm-password">确认密码</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password" required placeholder="请确认密码">
+
+                    <button type="submit" id="register-btn">注册</button>
+                </form>
+                <p>已经有账号了？<a href="#" id="to-login" onclick="toggleForm('login')">登录</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script(登录).js"></script>
+</body>
+</html>

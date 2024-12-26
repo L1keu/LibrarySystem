@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书详情</title>
+    <link rel="stylesheet" href="style(详情).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h2>图书详情</h2>
+
+        <!-- 图书信息展示 -->
+        <div class="book-info">
+            <div class="book-cover">
+                <img src="book-cover.jpg" alt="书籍封面" id="book-cover">
+            </div>
+            <div class="book-details">
+                <h3 id="book-title">《未知》</h3>
+                <p><strong>作者：</strong><span id="book-author">未知</span></p>
+                <p><strong>ISBN：</strong><span id="book-isbn">未知</span></p>
+                <p><strong>出版社：</strong><span id="book-publisher">未知</span></p>
+                <p><strong>出版日期：</strong><span id="book-pub-date">未知</span></p>
+                <p><strong>图书简介：</strong></p>
+                <p id="book-description">
+                    知识尚未注入大脑...........
+                </p>
+            </div>
+        </div>
+
+        <!-- 图书借阅状态和操作按钮 -->
+        <div class="book-status">
+            <p><strong>库存数量：</strong><span id="book-stock">？</span></p>
+            <p><strong>借阅状态：</strong><span id="book-status">？</span></p>
+
+            <!-- 借阅按钮 -->
+            <button id="borrow-btn" onclick="borrowBook()">借阅</button>
+        </div>
+    </div>
+
+    <script src="script(详情).js"></script>
+</body>
+</html>

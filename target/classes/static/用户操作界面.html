@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户操作界面</title>
+    <link rel="stylesheet" href="style(用户).css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图书管理系统 - 用户操作界面</h1>
+        </header>
+
+        <div class="user-info">
+            <h2>用户个人信息</h2>
+            <p>用户名: <span id="user-name">李四</span></p>
+            <p>邮箱: <span id="user-email">lisi@example.com</span></p>
+            <!-- 修改个人信息按钮，点击跳转到修改页面 -->
+            <button onclick="location.href='个人信息修改.html'">修改个人信息</button>
+        </div>
+
+        <div class="user-actions">
+            <h2>用户功能</h2>
+            <!-- 查看借阅记录按钮，点击跳转到借阅记录页面 -->
+            <button onclick="location.href='借阅记录.html'">查看借阅记录</button>
+            <!-- 查看罚金按钮，点击显示罚金弹窗 -->
+            <button onclick="viewFines()">查看和缴纳罚金</button>
+        </div>
+    </div>
+
+    <!-- 罚金信息弹窗 -->
+    <div id="fine-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFineModal()">&times;</span>
+            <h2>罚金信息</h2>
+            <p>当前罚金: <span id="fine-amount">20元</span></p>
+            <button onclick="payFine()">缴纳罚金</button>
+        </div>
+    </div>
+
+    <script src="script(用户).js"></script>
+</body>
+</html>

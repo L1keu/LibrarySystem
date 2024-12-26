@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="style(首页).css">
+    <link rel="icon" type="image/x-icon" href="图片/icon.ico">
+    <script src="script(首页).js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li style="background-color: white;"><img src="图片/icon.png" alt="icon" width="40" height="35"></li>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="book_management.html">图书分类</a></li>
+                <li><a href="borrow_management.html">排行榜</a></li>
+                <li><a href="user_management.html">讨论墙</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <!-- 搜索框 -->
+            <div class="search-container">
+                <form action="搜索结果页面.html" method="get">
+                    <input type="text" name="query" placeholder="按书名、作者、ISBN搜索" required>
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+            <!-- 登录和注册按钮 -->
+            <div class="user-info">
+                <div id="user-status">
+                    <a href="用户登录与注册.html"><button id="login-btn">登录</button></a>
+                    <a href="用户登录与注册.html"><button id="register-btn">注册</button></a>
+                    <span id="user-details" style="display: none;">
+                        欢迎，<span id="username">用户名</span> | <a href="管理员操作界面.html">借阅记录</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <img src="图片/002.jpg" alt="背景">
+            <div class="text-container">
+                <h1>欢迎来到图书管理系统</h1>
+                <p>这里是您管理和借阅图书的地方。</p>
+                <p style="font-size:15px; top:350px; left:50px;">我们的图书管理系统旨在为用户提供一个简便、高效的方式来管理和借阅图书。在这里，<br>
+                    您可以轻松浏览图书目录、查看图书详情、借阅自己感兴趣的书籍，并管理已借阅的书<br>
+                    单。系统为管理员提供强大的后台管理功能，帮助管理员快速添加、编辑和删除书籍，<br>
+                    实时更新图书库存信息。无论是学生、老师还是管理员，您都能在我们的系统中找到高<br>
+                    效便捷的解决方案，轻松管理和使用图书资源。<br>
+                    <br>
+                    立即开始您的图书之旅，发现更多精彩的知识与内容！</p>
+            </div>
+        </section>
+
+        <section class="book-categories">
+            <h2>图书分类</h2>
+            <div class="categories">
+                <div class="category-item" id="novel">
+                    <h3>文学</h3>
+                    <p>探索多种文学类型，包括经典文学、现代小说、诗歌等，满足不同读者的口味。</p>
+                    <p><a href="category.html?type=novel">查看更多</a></p>
+                </div>
+                <div class="category-item" id="technology">
+                    <h3>技术</h3>
+                    <p>为技术爱好者提供最新的编程、开发工具及教程书籍，帮助您提升技能和拓展知识。</p>
+                    <p><a href="category.html?type=technology">查看更多</a></p>
+                </div>
+                <div class="category-item" id="history">
+                    <h3>历史</h3>
+                    <p>深入了解各个历史时期的重大事件、人物及文化，丰富您的历史视野。</p>
+                    <p><a href="category.html?type=history">查看更多</a></p>
+                </div>
+                <div class="category-item" id="science">
+                    <h3>理学</h3>
+                    <p>涵盖自然科学领域的最新研究成果和经典理论，助您掌握物理、化学、生物等学科的精髓。</p>
+                    <p><a href="category.html?type=science">查看更多</a></p>
+                </div>
+                <div class="category-item" id="engineering">
+                    <h3>工学</h3>
+                    <p>提供各类工程技术书籍，涉及机械、电气、土木等学科，支持工程师在实践中不断提升能力。</p>
+                    <p><a href="category.html?type=engineering">查看更多</a></p>
+                </div>
+                <div class="category-item" id="arts">
+                    <h3>艺术</h3>
+                    <p>涵盖各种艺术形式，包括绘画、雕塑、音乐等，激发您的创造力和艺术欣赏能力。</p>
+                    <p><a href="category.html?type=arts">查看更多</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hot-books">
+            <h2>热门图书</h2>
+            <div class="book-list">
+                <!-- 渲染每本书籍的HTML -->
+                <div class="book-item">
+                    <a href="图书详情.html?id=1"> <!-- 这里的 id = 1 是图书ID -->
+                        <img src="book1.jpg" alt="书名1">
+                        <p>书名1</p>
+                    </a>
+                </div>
+                <div class="book-item">
+                    <a href="图书详情.html?id=2"> <!-- 这里的 id = 2 是图书ID -->
+                        <img src="book2.jpg" alt="书名2">
+                        <p>书名2</p>
+                    </a>
+                </div>
+                <div class="book-item">
+                    <a href="图书详情.html?id=3"> <!-- 这里的 id = 3 是图书ID -->
+                        <img src="book3.jpg" alt="书名3">
+                        <p>书名3</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 图书管理系统</p>
+    </footer>
+</body>
+</html>
